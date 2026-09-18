@@ -128,10 +128,10 @@ void simulate_priority_dynamic(Process *p, int n, int aging_step) {
     avg_response /= n;
 
 
-    // ESTO NO ESTA BIEN, LOS ULTIMOS 3 PARAMETROS NO ME CUADRAN
+    //  "Proceso", "Llegada", "Rafaga", "Prioridad", "Inicio", "Final", "T. de Espera", "T. de Retorno", "T. de Respuesta";
     printf("\nResultados finales:\n");
     printf("%-4s %-8s %-6s %-6s %-6s %-8s %-6s %-6s %-6s\n",
-           "Proceso", "Llegada", "Rafaga", "Prioridad", "Inicio", "Final", "T. de Espera", "T. de Retorno", "T. de Respuesta");
+           "Pro", "Lle", "Raf", "Pri", "Ini", "Fin", "T.Esp.", "T.Ret.", "T.Res.");
     for (int i = 0; i < n; i++) {
         printf("%-4d %-8d %-6d %-6d %-6d %-8d %-6d %-6d %-6d\n",
                p[i].id, p[i].arrival, p[i].burst, p[i].priority,
